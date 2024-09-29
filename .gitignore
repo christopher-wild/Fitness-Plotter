@@ -1,6 +1,6 @@
 example_data/
 .venv/
-
+*.egg-info
 *.json
 
 __pycache__/

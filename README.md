@@ -26,3 +26,5 @@ Please raise any issues you find on the github issues page, any feedback is very
 If you want to contribute feel free to fork the repository and request a merge with your changes. 
 
 **This code is only tested with a forerunner 45, if you have another device and it does not work feel free to raise an issue**
+
+Finally if you want to run this code but struggle with any of the steps you can reach out either through the issues or my email found in the pyproject.toml file.
