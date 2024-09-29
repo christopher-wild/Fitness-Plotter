@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fitness_plotter"
+version = "0.1.0-alpha"
+description = "A project to plot fitness data"
+
+authors = [
+    { name="Christopher Wild", email="christopherwild53@gmail.com" }
+]
+
+dependencies = [
+    "garmin_fit_sdk"
+]
+
+[tool.setuptools.packages.find]
+where = ["fitness_plotter/"]

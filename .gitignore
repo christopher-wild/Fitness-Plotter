@@ -2,3 +2,5 @@ example_data/
 .venv/
 
 *.json
+
+__pycache__/
