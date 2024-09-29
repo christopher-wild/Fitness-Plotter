@@ -15,5 +15,8 @@ dependencies = [
     "garmin_fit_sdk"
 ]
 
+[project.scripts]
+plot_all = "fitness_plotter.plot_all:plot_all"
+
 [tool.setuptools.packages.find]
 where = ["fitness_plotter/"]

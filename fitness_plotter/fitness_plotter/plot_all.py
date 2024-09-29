@@ -10,12 +10,14 @@ def get_args():
     parser.add_argument("-o", "--output", type=str, help="Output file name, should be an html file (default: 'map.html')", default="map.html")
     return parser.parse_args()
 
-if __name__ == "__main__":
+def plot_all():
     args = get_args()
-
     m = folium.Map()
+    fit_files = glob(str(Path(args.directory + "/*.fit")))
 
-    for fit_file in glob(str(Path(args.directory + "/*.fit"))):
+    if len(fit_files) == 0:
+        raise ValueError(f"No .fit files found in {args.directory}")
+    for fit_file in fit_files:
         fit = FitFile(fit_file)
         sport = fit.sport
         if sport == 'running':
@@ -28,5 +30,8 @@ if __name__ == "__main__":
             color = 'black'
         if polyline := fit.polyline:
             folium.PolyLine(polyline, color=color, opacity=0.4).add_to(m)
-        
     m.save(Path(args.output))
+    print(f"{len(fit_files)} files saved to {args.output}")
+
+if __name__ == "__main__":
+    plot_all()
