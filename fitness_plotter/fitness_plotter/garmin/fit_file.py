@@ -19,6 +19,12 @@ class FitFile:
             return polyline
         except KeyError:
             logging.info(f"No activity messages in {self.file_path}")
-            
+        
 
-
+    @property
+    def sport(self):
+        try:
+            sport = self.messages['sport_mesgs'][0]['sport']
+        except KeyError:
+            sport = ''
+        return sport
