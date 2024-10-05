@@ -8,11 +8,12 @@ version = "0.1.0-alpha"
 description = "A project to plot fitness data"
 
 authors = [
-    { name="Christopher Wild", email="christopherwild53@gmail.com" }
+    { name="Christopher Wild", email="christopherwild56@gmail.com" }
 ]
 
 dependencies = [
-    "garmin_fit_sdk"
+    "garmin_fit_sdk",
+    "tqdm"
 ]
 
 [project.scripts]

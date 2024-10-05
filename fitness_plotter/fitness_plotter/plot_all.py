@@ -1,5 +1,6 @@
 import argparse
 import folium
+from tqdm import tqdm
 from glob import glob
 from pathlib import Path
 from fitness_plotter.garmin.fit_file import FitFile
@@ -17,7 +18,7 @@ def plot_all():
 
     if len(fit_files) == 0:
         raise ValueError(f"No .fit files found in {args.directory}")
-    for fit_file in fit_files:
+    for fit_file in tqdm(fit_files):
         fit = FitFile(fit_file)
         sport = fit.sport
         if sport == 'running':
