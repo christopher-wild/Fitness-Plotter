@@ -18,3 +18,7 @@ class GPXFile:
     @property
     def sport(self):
         return self.gpx.tracks[0].name
+    
+    @property
+    def date(self):
+        return self.gpx.time

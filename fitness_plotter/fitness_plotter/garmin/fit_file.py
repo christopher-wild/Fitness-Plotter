@@ -28,3 +28,8 @@ class FitFile:
         except KeyError:
             sport = ''
         return sport
+    
+    @property
+    def date(self):
+        return self.messages['file_id_mesgs'][0]['time_created']
+        
